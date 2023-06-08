@@ -1,0 +1,16 @@
+@use "variables" as v;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: rgb(222, 227, 228);
+    color:v.$colorBlackFaded;
+}

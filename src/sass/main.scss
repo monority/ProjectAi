@@ -1,0 +1,231 @@
+@use "reset";
+
+@use "variables" as v;
+
+@use "mixins" as m;
+
+// Header
+
+.App-header {
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 12rem;
+    }
+
+
+
+}
+
+
+// Variables Globales
+.main {
+    position: absolute;
+}
+
+.container {
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+.containerOrder {
+    display: flex;
+
+    .list {
+        background-color: white;
+        width: 50%;
+    }
+
+    img {
+        width: 40rem;
+    }
+}
+
+// Section 1 
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+}
+
+.wrapperCard {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+    width: 30rem;
+    height: auto;
+    border: 1px solid rgba(75, 75, 75, 0.3);
+    color: rgb(66, 66, 66);
+    height: 30rem;
+    box-shadow: 0px 0px 12px 9px rgba(107, 107, 107, 0.12);
+}
+
+// Section order
+
+#order {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+    img {
+        width: 10rem;
+    }
+
+    .aiWrap {
+        display: flex;
+
+    }
+
+    .list {
+        text-align: center;
+        display: flex;
+
+
+    }
+
+    .totalWrapper {
+        margin: 0 3rem;
+        display: flex;
+ 
+    }
+}
+
+// Gestion des cartes 
+
+.bgBlue {
+    background-color: #e1e7e9;
+    color: rgb(81, 116, 148);
+}
+
+.bgGreen {
+    background-color: #e1e7e9;
+    color: rgb(68, 95, 72);
+}
+
+.bgRed {
+    background-color: #e1e7e9;
+    color: rgb(155, 91, 91);
+}
+
+.wrapperText {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.wrapperAi {
+    display: inline-block;
+    text-align: center;
+    margin: 2rem;
+    box-shadow: 0px 0px 12px 9px rgba(107, 107, 107, 0.12);
+    padding: 3.5rem;
+    background-color: #e1e7e9;
+
+    p {
+        font-size: v.$fontSizeTitle;
+    }
+
+    .addLink {
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 1rem 2rem;
+        background-color: rgb(213, 233, 226);
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: rgb(94, 209, 175);
+        }
+    }
+}
+
+
+// Commandes en cours 
+
+.currentOrder {
+    table {
+        width: 100%;
+        text-align: center;
+        p{
+            cursor: pointer;
+            background-color: white;
+            width: 5rem;
+            border: 1px solid black;
+        }
+    }
+
+    .wrapperOrder {
+        background-color: rgb(255, 255, 255, 0.8);
+    }
+}
+
+// Footer
+
+
+// Animations 
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinInverted {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+// Not found
+
+.notFound {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    font-size: v.$fontSizeTitleLarge;
+
+
+    img {
+
+        width: 5rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
