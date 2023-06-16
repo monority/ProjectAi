@@ -22,8 +22,8 @@ const Order = () => {
   const selectedOrder = orders.find((order) => order.id == id);
   let total = 0;
 
-  const addAi = () => {
-    dispatch(add({ orders }));
+  const addAi = (ai) => {
+    dispatch(editAi(ai ));
   };
 
   const calculateTotal = () => {
@@ -43,7 +43,7 @@ const Order = () => {
           img={ai.img}
           price={ai.price}
           name={ai.name}
-          action={() => addAi(ai)}
+          action={() => addAi( ai )}
         />
       );
     });

@@ -17,16 +17,14 @@ const dataSlice = createSlice({
       });
     },
     add: (state, action) => {
-      const { id, name, price, x } = action.payload;
-      const orderIndex = state.orders.findIndex((order) => order.id === x.id);
-      const pizzaIndex = state.orders[orderIndex].pizzas.findIndex(
-        (pizza) => pizza.id == id
-      );
+      const { id, name, price } = action.payload;
+      const orderIndex = state.orders.findIndex((order) => order.id === id); 
+      const pizzaIndex = state.orders[orderIndex].items.findIndex((pizza) => pizza.id == id);
 
       if (pizzaIndex != -1) {
-        state.orders[orderIndex].pizzas[pizzaIndex].quantity++;
+        state.orders[orderIndex].items[pizzaIndex].quantity++;
       } else {
-        state.orders[orderIndex].pizzas.push({
+        state.orders[orderIndex].items.push({
           id,
           name,
           price,
